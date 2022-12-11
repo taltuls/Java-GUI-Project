@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" style="-fx-background-image: url('/photos/menuBackground.jpg'); -fx-background-size: cover;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.ZooEmployeeMainController">
+   <children>
+      <VBox layoutX="-1.0" prefHeight="510.0" prefWidth="165.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="535.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="43.0" prefWidth="143.0">
+               <children>
+                  <VBox prefHeight="44.0" prefWidth="143.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="42.0" prefWidth="143.0" />
+            <VBox prefHeight="172.0" prefWidth="165.0">
+               <children>
+                  <Button fx:id="homeButton" blendMode="MULTIPLY" mnemonicParsing="false" onAction="#home" prefHeight="97.0" prefWidth="165.0" stylesheets="@styleSheet.css" text="Home">
+                     <styleClass>
+                        <String fx:value="menuColor" />
+                        <String fx:value="blueHover" />
+                        <String fx:value="menuButton" />
+                     </styleClass>
+                  </Button>
+               </children></VBox>
+            <VBox prefHeight="541.0" prefWidth="165.0">
+               <children>
+                  <VBox prefHeight="64.0" prefWidth="165.0">
+                     <children>
+                        <MenuButton alignment="CENTER" blendMode="MULTIPLY" mnemonicParsing="false" popupSide="RIGHT" prefHeight="75.0" prefWidth="165.0" stylesheets="@styleSheet.css" text="Add">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#addVisitor" text="Add Visitor" />
+                              <MenuItem mnemonicParsing="false" onAction="#addEmployee" text="Add Employee" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <Menu mnemonicParsing="false" text="Add Snack">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" onAction="#addFood" text="Food" />
+                                    <MenuItem mnemonicParsing="false" onAction="#addDrink" text="Drink" />
+                                 </items>
+                              </Menu>
+                           </items>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <effect>
+                              <ColorAdjust contrast="1.0" />
+                           </effect>
+                           <styleClass>
+                              <String fx:value="menuColordark" />
+                              <String fx:value="menuButton" />
+                           </styleClass>
+                        </MenuButton>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="62.0" prefWidth="177.0">
+                     <children>
+                        <MenuButton alignment="CENTER" blendMode="MULTIPLY" mnemonicParsing="false" popupSide="RIGHT" prefHeight="53.0" prefWidth="173.0" stylesheets="@styleSheet.css" text="Remove">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#removeVisitor" text="Remove Visitor" />
+                              <MenuItem mnemonicParsing="false" onAction="#removeEmployee" text="Remove Employee" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem mnemonicParsing="false" onAction="#removeSnack" text="Remove Snack" />
+                           </items>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <effect>
+                              <ColorAdjust contrast="1.0" />
+                           </effect>
+                           <styleClass>
+                              <String fx:value="menuColordark" />
+                              <String fx:value="menuButton" />
+                           </styleClass>
+                        </MenuButton>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="59.0" prefWidth="177.0">
+                     <children>
+                        <MenuButton alignment="CENTER" blendMode="MULTIPLY" mnemonicParsing="false" popupSide="RIGHT" prefHeight="80.0" prefWidth="165.0" stylesheets="@styleSheet.css" text="Actions">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#moveVisitor" text="MoveVisitor" />
+                              <MenuItem mnemonicParsing="false" onAction="#newPurchase" text="New purchase" />
+                           </items>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <effect>
+                              <ColorAdjust contrast="1.0" />
+                           </effect>
+                           <styleClass>
+                              <String fx:value="menuColordark" />
+                              <String fx:value="menuButton" />
+                           </styleClass>
+                        </MenuButton>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="61.0" prefWidth="177.0">
+                     <children>
+                        <VBox prefHeight="65.0" prefWidth="177.0">
+                           <children>
+                              <MenuButton alignment="CENTER" blendMode="MULTIPLY" mnemonicParsing="false" popupSide="RIGHT" prefHeight="84.0" prefWidth="165.0" stylesheets="@styleSheet.css" text="Treat Animals">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" onAction="#treatAnimal" text="Animal treatment" />
+                                 </items>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <ColorAdjust contrast="1.0" />
+                                 </effect>
+                                 <styleClass>
+                                    <String fx:value="menuColordark" />
+                                    <String fx:value="menuButton" />
+                                 </styleClass>
+                              </MenuButton>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="67.0" prefWidth="177.0">
+                     <children>
+                        <MenuButton alignment="CENTER" blendMode="MULTIPLY" mnemonicParsing="false" popupSide="RIGHT" prefHeight="68.0" prefWidth="165.0" stylesheets="@styleSheet.css" text="Queries">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#getAllAnimalsBySection" text="getAllAnimalsBySection" />
+                              <MenuItem mnemonicParsing="false" onAction="#allAnimalsByWorker" text="allAnimalsByWorker" />
+                              <MenuItem mnemonicParsing="false" onAction="#allSnacksBySnackBar" text="allSnacksBySnackBar" />
+                              <MenuItem mnemonicParsing="false" onAction="#reptilesSleep" text="reptilesSleepAtSeasson" />
+                              <MenuItem mnemonicParsing="false" onAction="#getAllDiscounts" text="geAllDiscountAmount" />
+                              <MenuItem mnemonicParsing="false" onAction="#getMaxVsMin" text="getMaxVisitorsVSMaxWorkers" />
+                           </items>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <effect>
+                              <ColorAdjust contrast="1.0" />
+                           </effect>
+                           <styleClass>
+                              <String fx:value="menuColordark" />
+                              <String fx:value="menuButton" />
+                           </styleClass>
+                        </MenuButton>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="62.0" prefWidth="177.0">
+                     <children>
+                        <MenuButton alignment="CENTER" mnemonicParsing="false" popupSide="RIGHT" prefHeight="141.0" prefWidth="177.0" stylesheets="@styleSheet.css" text="Revenue">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#purchases" text="Purchases" />
+                              <MenuItem mnemonicParsing="false" onAction="#zooTotalRevenue" text="TotalRevenue" />
+                           </items>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="menuButton" />
+                              <String fx:value="menuColor" />
+                           </styleClass>
+                        </MenuButton>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="60.0" prefWidth="177.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#zooData" prefHeight="149.0" prefWidth="177.0" stylesheets="@styleSheet.css" text="Zoo Data">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="menuColor" />
+                              <String fx:value="menuButton" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="67.0" prefWidth="165.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#logOutFromSystem" prefHeight="88.0" prefWidth="165.0" style="-fx-font-style: italic;" stylesheets="@styleSheet.css" text="Log Out">
+                           <styleClass>
+                              <String fx:value="menuColor" />
+                              <String fx:value="logOutButton" />
+                              <String fx:value="logOutButton" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="MainPanel" layoutX="165.0" prefHeight="550.0" prefWidth="525.0">
+         <children>
+            <VBox layoutX="110.0" layoutY="108.0" prefHeight="51.0" prefWidth="165.0" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

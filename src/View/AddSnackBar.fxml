@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="MainPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="525.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AddController">
+   <children>
+      <Label layoutX="100.0" layoutY="280.0" prefHeight="17.0" prefWidth="96.0" styleClass="labelFont" stylesheets="@styleSheet.css" text="Section:">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font></Label>
+      <Label layoutX="100.0" layoutY="161.0" prefHeight="17.0" prefWidth="69.0" styleClass="labelFont" stylesheets="@styleSheet.css" text="Name:">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font></Label>
+      <Group layoutX="205.0" layoutY="253.0" />
+      <ChoiceBox fx:id="empSections" layoutX="250.0" layoutY="289.0" prefHeight="25.0" prefWidth="156.0" styleClass="chocie-box" stylesheets="@styleSheet.css" />
+      <Button fx:id="saveButton" layoutX="380.0" layoutY="462.0" mnemonicParsing="false" onAction="#saveData" prefHeight="38.0" prefWidth="69.0" stylesheets="@styleSheet.css" text="SAVE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+         <styleClass>
+            <String fx:value="saveButton" />
+            <String fx:value="saveHover" />
+         </styleClass></Button>
+      <TextField fx:id="snackBarName" layoutX="250.0" layoutY="161.0" styleClass="chocie-box" stylesheets="@styleSheet.css" />
+      <Label layoutX="35.0" layoutY="14.0" prefHeight="26.0" prefWidth="156.0" style="-fx-text-fill: #990000;" styleClass="title" stylesheets="@styleSheet.css" text="Add SnackBar" textFill="#191818">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

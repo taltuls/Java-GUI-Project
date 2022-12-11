@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="MainPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="525.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AllSnackBySnackBarController">
+   <children>
+      <Label fx:id="title" layoutX="230.0" layoutY="59.0" styleClass="labelHeader" stylesheets="@styleSheet.css" text="All Snacks By SnackBar">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="Display" layoutX="309.0" layoutY="116.0" mnemonicParsing="false" onAction="#submit" stylesheets="@styleSheet.css" text="Display">
+         <styleClass>
+            <String fx:value="saveButton" />
+            <String fx:value="blueHover" />
+         </styleClass></Button>
+      <TableView fx:id="table" layoutX="86.0" layoutY="167.0" prefHeight="200.0" prefWidth="375.0">
+        <columns>
+          <TableColumn fx:id="typeCol" prefWidth="75.0" text="Type" />
+          <TableColumn fx:id="nameCol" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="priceCol" prefWidth="75.0" text="Price" />
+            <TableColumn fx:id="idCol" prefWidth="75.0" text="Id" />
+            <TableColumn fx:id="fattening" prefWidth="75.0" text="Fattening" />
+        </columns>
+      </TableView>
+      <ChoiceBox fx:id="snackBar" layoutX="86.0" layoutY="116.0" prefWidth="150.0" styleClass="chocie-box" stylesheets="@styleSheet.css" />
+   </children>
+</AnchorPane>

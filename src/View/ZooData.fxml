@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="MainPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="525.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.ZooDataController">
+   <children>
+      <Label fx:id="label" layoutX="14.0" layoutY="1.0" prefHeight="26.0" prefWidth="59.0" styleClass="labelHeader" stylesheets="@styleSheet.css" text="Data" />
+      <AnchorPane fx:id="dataDisplayPane" layoutY="100.0" prefHeight="454.0" prefWidth="525.0" />
+      <RadioButton fx:id="radioButton" layoutX="7.0" layoutY="79.0" mnemonicParsing="false" onAction="#sectionsData" styleClass="labelFont" stylesheets="@styleSheet.css" text="Sections">
+         <toggleGroup>
+            <ToggleGroup fx:id="data" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="radioButton" layoutX="263.0" layoutY="27.0" mnemonicParsing="false" onAction="#animalsData" styleClass="labelFont" stylesheets="@styleSheet.css" text="Mammals" toggleGroup="$data" />
+      <RadioButton fx:id="radioButton" layoutX="263.0" layoutY="79.0" mnemonicParsing="false" onAction="#reptileData" styleClass="labelFont" stylesheets="@styleSheet.css" text="Reptiles" toggleGroup="$data" />
+      <RadioButton fx:id="radioButton" layoutX="263.0" layoutY="53.0" mnemonicParsing="false" onAction="#BirdsData" styleClass="labelFont" stylesheets="@styleSheet.css" text="Birds" toggleGroup="$data" />
+      <RadioButton fx:id="radioButton" layoutX="103.0" layoutY="53.0" mnemonicParsing="false" onAction="#AnimalsVisitedByVisitor" styleClass="labelFont" stylesheets="@styleSheet.css" text="Visitor's Animals" toggleGroup="$data" />
+      <RadioButton fx:id="radioButton" layoutX="103.0" layoutY="27.0" mnemonicParsing="false" onAction="#treatAnimals" styleClass="labelFont" stylesheets="@styleSheet.css" text="Employee's Animals" toggleGroup="$data" />
+      <RadioButton fx:id="radioButton" layoutX="7.0" layoutY="27.0" mnemonicParsing="false" onAction="#displayEmployeeData" styleClass="labelFont" stylesheets="@styleSheet.css" text="Employees" toggleGroup="$data" />
+      <RadioButton fx:id="radioButton" layoutX="7.0" layoutY="53.0" mnemonicParsing="false" onAction="#visitorData" styleClass="labelFont" stylesheets="@styleSheet.css" text="Visitors" toggleGroup="$data" />
+      <RadioButton fx:id="radioButton" layoutX="356.0" layoutY="27.0" mnemonicParsing="false" onAction="#snacksData" styleClass="labelFont" stylesheets="@styleSheet.css" text="Snacks" toggleGroup="$data" />
+      <RadioButton fx:id="radioButton" layoutX="103.0" layoutY="79.0" mnemonicParsing="false" onAction="#notTreatmentAnimals" styleClass="labelFont" stylesheets="@styleSheet.css" text="Not Treated Animals" toggleGroup="$data" />
+      <RadioButton fx:id="radioButton" layoutX="356.0" layoutY="53.0" mnemonicParsing="false" onAction="#snackBarData" styleClass="labelFont" stylesheets="@styleSheet.css" text="SnackBars" toggleGroup="$data" />
+   </children>
+</AnchorPane>

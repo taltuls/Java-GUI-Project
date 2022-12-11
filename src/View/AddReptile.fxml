@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="MainPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="525.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AddController">
+   <children>
+      <Label layoutX="152.0" layoutY="38.0" prefHeight="54.0" prefWidth="152.0" styleClass="labelFont" stylesheets="@styleSheet.css" text="Name:">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font></Label>
+      <DatePicker fx:id="birthDate" layoutX="264.0" layoutY="100.0" prefHeight="25.0" prefWidth="149.0" />
+      <Group layoutX="205.0" layoutY="253.0" />
+      <RadioButton fx:id="female" layoutX="264.0" layoutY="204.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="76.0" style="-fx-font-size: 14; -fx-font-style: italic;" styleClass="labelFont" stylesheets="@styleSheet.css" text="Female">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </RadioButton>
+      <Label layoutX="152.0" layoutY="104.0" styleClass="labelFont" stylesheets="@styleSheet.css" text="Birthday:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="152.0" layoutY="204.0" styleClass="labelFont" stylesheets="@styleSheet.css" text="Gender:" />
+      <ChoiceBox fx:id="empSections" layoutX="264.0" layoutY="253.0" prefHeight="25.0" prefWidth="156.0" styleClass="chocie-box" stylesheets="@styleSheet.css" />
+      <RadioButton fx:id="male" layoutX="376.0" layoutY="204.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="58.0" style="-fx-font-size: 14; -fx-font-style: italic;" styleClass="labelFont" stylesheets="@styleSheet.css" text="Male" toggleGroup="$gender" />
+      <TextField fx:id="FirstName" layoutX="264.0" layoutY="52.0" styleClass="chocie-box" stylesheets="@styleSheet.css" />
+      <Button fx:id="saveButton" layoutX="371.0" layoutY="453.0" mnemonicParsing="false" onAction="#saveData" prefHeight="38.0" prefWidth="76.0" stylesheets="@styleSheet.css" text="SAVE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+         <styleClass>
+            <String fx:value="saveButton" />
+            <String fx:value="saveHover" />
+         </styleClass></Button>
+      <Label layoutX="152.0" layoutY="258.0" styleClass="labelFont" stylesheets="@styleSheet.css" text="Section:" />
+      <Label layoutX="78.0" layoutY="313.0" />
+      <Label layoutX="152.0" layoutY="312.0" prefHeight="20.0" prefWidth="76.0" styleClass="labelFont" stylesheets="@styleSheet.css" text="Dangerous:" />
+      <Label layoutX="152.0" layoutY="158.0" styleClass="labelFont" stylesheets="@styleSheet.css" text="Food:" />
+      <ChoiceBox fx:id="animalFood" layoutX="264.0" layoutY="156.0" prefHeight="25.0" prefWidth="156.0" styleClass="chocie-box" stylesheets="@styleSheet.css" />
+      <RadioButton fx:id="yesDangerous" layoutX="264.0" layoutY="305.0" mnemonicParsing="false" style="-fx-font-size: 14; -fx-font-style: italic;" styleClass="labelFont" stylesheets="@styleSheet.css" text="Yes">
+         <toggleGroup>
+            <ToggleGroup fx:id="dangerous" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="notDangerous" layoutX="376.0" layoutY="305.0" mnemonicParsing="false" style="-fx-font-size: 14; -fx-font-style: italic;" styleClass="labelFont" stylesheets="@styleSheet.css" text="No" toggleGroup="$dangerous" />
+      <RadioButton fx:id="yesHibernates" layoutX="264.0" layoutY="364.0" mnemonicParsing="false" style="-fx-font-size: 14; -fx-font-style: italic;" styleClass="labelFont" stylesheets="@styleSheet.css" text="Yes">
+         <toggleGroup>
+            <ToggleGroup fx:id="hibernation" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="notHibernates" layoutX="376.0" layoutY="364.0" mnemonicParsing="false" styleClass="labelFont" stylesheets="@styleSheet.css" text="No" toggleGroup="$hibernation" />
+      <Label layoutX="152.0" layoutY="366.0" styleClass="labelFont" stylesheets="@styleSheet.css" text="Hibernates:" />
+      <Label layoutX="35.0" layoutY="14.0" prefHeight="26.0" prefWidth="136.0" style="-fx-text-fill: #990000;" styleClass="title" stylesheets="@styleSheet.css" text="Add Reptile" textFill="#191818">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

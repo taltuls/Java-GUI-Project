@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="525.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AddController">
+   <children>
+      <Label layoutX="152.0" layoutY="56.0" prefHeight="17.0" prefWidth="69.0" styleClass="labelFont" stylesheets="@styleSheet.css" text="Type:" />
+      <Group layoutX="215.0" layoutY="263.0" />
+      <RadioButton fx:id="yesFattening" layoutX="262.0" layoutY="192.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="69.0" stylesheets="@styleSheet.css" text="Yes">
+         <toggleGroup>
+            <ToggleGroup fx:id="isFattening" />
+         </toggleGroup>
+         <styleClass>
+            <String fx:value="label" />
+            <String fx:value="labelFont" />
+         </styleClass>
+      </RadioButton>
+      <Label layoutX="152.0" layoutY="104.0" styleClass="labelFont" stylesheets="@styleSheet.css" text="Name:" />
+      <Label layoutX="152.0" layoutY="185.0" styleClass="labelFont" stylesheets="@styleSheet.css" text="Is fattening" />
+      <RadioButton fx:id="notFattening" layoutX="374.0" layoutY="192.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="58.0" stylesheets="@styleSheet.css" text="No" toggleGroup="$isFattening">
+         <styleClass>
+            <String fx:value="label" />
+            <String fx:value="labelFont" />
+         </styleClass></RadioButton>
+      <Button fx:id="saveButton" layoutX="371.0" layoutY="453.0" mnemonicParsing="false" onAction="#saveData" stylesheets="@styleSheet.css" text="SAVE">
+         <styleClass>
+            <String fx:value="saveHover" />
+            <String fx:value="saveButton" />
+         </styleClass></Button>
+      <Label layoutX="152.0" layoutY="233.0" styleClass="labelFont" stylesheets="@styleSheet.css" text="Price:" />
+      <Label layoutX="88.0" layoutY="323.0" />
+      <Label layoutX="152.0" layoutY="277.0" styleClass="labelFont" stylesheets="@styleSheet.css" text="Comes in plate:" />
+      <Label layoutX="152.0" layoutY="141.0" styleClass="labelFont" stylesheets="@styleSheet.css" text="Bar:" />
+      <ChoiceBox fx:id="FoodType" layoutX="264.0" layoutY="52.0" prefHeight="25.0" prefWidth="156.0" styleClass="chocie-box" stylesheets="@styleSheet.css" />
+      <RadioButton fx:id="yesPlate" layoutX="262.0" layoutY="284.0" mnemonicParsing="false" stylesheets="@styleSheet.css" text="Yes">
+         <toggleGroup>
+            <ToggleGroup fx:id="plate" />
+         </toggleGroup>
+         <styleClass>
+            <String fx:value="label" />
+            <String fx:value="labelFont" />
+         </styleClass>
+      </RadioButton>
+      <RadioButton fx:id="noPlate" layoutX="374.0" layoutY="284.0" mnemonicParsing="false" stylesheets="@styleSheet.css" text="No" toggleGroup="$plate">
+         <styleClass>
+            <String fx:value="label" />
+            <String fx:value="labelFont" />
+         </styleClass></RadioButton>
+      <RadioButton fx:id="yesSpicy" layoutX="262.0" layoutY="332.0" mnemonicParsing="false" stylesheets="@styleSheet.css" text="Yes">
+         <toggleGroup>
+            <ToggleGroup fx:id="spicy" />
+         </toggleGroup>
+         <styleClass>
+            <String fx:value="label" />
+            <String fx:value="labelFont" />
+         </styleClass>
+      </RadioButton>
+      <RadioButton fx:id="noSpicy" layoutX="374.0" layoutY="332.0" mnemonicParsing="false" stylesheets="@styleSheet.css" text="No" toggleGroup="$spicy">
+         <styleClass>
+            <String fx:value="label" />
+            <String fx:value="labelFont" />
+         </styleClass></RadioButton>
+      <Label layoutX="152.0" layoutY="325.0" styleClass="labelFont" stylesheets="@styleSheet.css" text="Spicy:" />
+      <ChoiceBox fx:id="SnackBar" layoutX="261.0" layoutY="136.0" prefHeight="25.0" prefWidth="156.0" styleClass="chocie-box" stylesheets="@styleSheet.css" />
+      <TextField fx:id="FoodPrice" layoutX="272.0" layoutY="231.0" styleClass="chocie-box" stylesheets="@styleSheet.css" />
+      <Label layoutX="143.0" layoutY="375.0" styleClass="labelFont" stylesheets="@styleSheet.css" text="Gluten free:" />
+      <RadioButton fx:id="yesGluten" layoutX="262.0" layoutY="382.0" mnemonicParsing="false" stylesheets="@styleSheet.css" text="Yes">
+         <toggleGroup>
+            <ToggleGroup fx:id="gluten" />
+         </toggleGroup>
+         <styleClass>
+            <String fx:value="label" />
+            <String fx:value="labelFont" />
+         </styleClass>
+      </RadioButton>
+      <RadioButton fx:id="noGluten" layoutX="376.0" layoutY="375.0" mnemonicParsing="false" stylesheets="@styleSheet.css" text="No" toggleGroup="$gluten">
+         <styleClass>
+            <String fx:value="label" />
+            <String fx:value="labelFont" />
+         </styleClass></RadioButton>
+      <TextField fx:id="SnackName" layoutX="264.0" layoutY="100.0" styleClass="chocie-box" stylesheets="@styleSheet.css" />
+      <Label layoutX="45.0" layoutY="24.0" prefHeight="26.0" prefWidth="136.0" style="-fx-text-fill: #990000;" styleClass="title" stylesheets="@styleSheet.css" text="Add Food" textFill="#191818">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="MainPanel" prefHeight="550.0" prefWidth="525.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AddController">
+   <children>
+      <Label layoutX="152.0" layoutY="54.0" prefHeight="20.0" prefWidth="108.0" style="-fx-text-fill: #ffffff; -fx-font-weight: bold;" styleClass="labelFont" stylesheets="@styleSheet.css" text="First Name:">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect></Label>
+      <Label layoutX="152.0" layoutY="104.0" prefHeight="18.0" prefWidth="87.0" style="-fx-text-fill: #ffffff; -fx-font-weight: bold;" styleClass="labelFont" stylesheets="@styleSheet.css" text="Last Name:">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect></Label>
+      <DatePicker fx:id="birthDate" layoutX="264.0" layoutY="156.0" prefHeight="25.0" prefWidth="149.0" promptText="Enter Birthday" stylesheets="@styleSheet.css" />
+      <Group layoutX="276.0" layoutY="246.0" />
+      <RadioButton fx:id="female" layoutX="264.0" layoutY="204.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="87.0" styleClass="labelFont" stylesheets="@styleSheet.css" text="Female">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect></RadioButton>
+      <Label layoutX="152.0" layoutY="158.0" style="-fx-text-fill: #ffffff; -fx-font-weight: bold;" styleClass="labelFont" stylesheets="@styleSheet.css" text="Birthday:">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect></Label>
+      <Label layoutX="152.0" layoutY="204.0" style="-fx-text-fill: #ffffff; -fx-font-weight: bold;" styleClass="labelFont" stylesheets="@styleSheet.css" text="Gender:">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect></Label>
+      <ChoiceBox fx:id="empSections" layoutX="264.0" layoutY="253.0" prefWidth="150.0" styleClass="chocie-box" stylesheets="@styleSheet.css">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></ChoiceBox>
+      <RadioButton fx:id="male" layoutX="376.0" layoutY="204.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="58.0" styleClass="labelFont" stylesheets="@styleSheet.css" text="Male" toggleGroup="$gender">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect></RadioButton>
+      <ChoiceBox fx:id="job" layoutX="264.0" layoutY="305.0" prefHeight="25.0" prefWidth="156.0" styleClass="chocie-box" stylesheets="@styleSheet.css" />
+      <TextField fx:id="FirstName" layoutX="264.0" layoutY="52.0" promptText="Enter First Name" styleClass="chocie-box" stylesheets="@styleSheet.css" />
+      <TextField fx:id="lastName" layoutX="264.0" layoutY="100.0" promptText="Enter Last Name" styleClass="chocie-box" stylesheets="@styleSheet.css" />
+      <Button fx:id="saveButton" layoutX="371.0" layoutY="453.0" mnemonicParsing="false" onAction="#saveData" prefHeight="35.0" prefWidth="69.0" stylesheets="@styleSheet.css" text="SAVE" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+         <styleClass>
+            <String fx:value="saveHover" />
+            <String fx:value="saveButton" />
+         </styleClass></Button>
+      <Label fx:id="sectionEmployee" layoutX="154.0" layoutY="258.0" style="-fx-text-fill: #ffffff; -fx-font-weight: bold;" styleClass="labelFont" stylesheets="@styleSheet.css" text="Section:" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect></Label>
+      <Label layoutX="154.0" layoutY="312.0" style="-fx-text-fill: #ffffff; -fx-font-weight: bold;" stylesheets="@styleSheet.css" text="Job:">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect></Label>
+      <Label layoutX="152.0" layoutY="366.0" style="-fx-text-fill: #ffffff; -fx-font-weight: bold;" styleClass="labelFont" stylesheets="@styleSheet.css" text="Password:">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect></Label>
+      <PasswordField fx:id="password" layoutX="264.0" layoutY="364.0" onKeyTyped="#passwordStrength" prefHeight="25.0" prefWidth="156.0" promptText="Enter Password" styleClass="chocie-box" stylesheets="@styleSheet.css">
+         <tooltip>
+            <Tooltip fx:id="tooltip" text="Must be at least 5 characters" />
+         </tooltip></PasswordField>
+      <Text fx:id="passwordMeter" layoutX="282.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="97.279296875" />
+      <Label layoutX="35.0" layoutY="14.0" prefHeight="26.0" prefWidth="172.0" style="-fx-text-fill: #990000;" styleClass="title" stylesheets="@styleSheet.css" text="Add Employee" textFill="#191818">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Text fx:id="passwordMeter1" layoutX="285.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="97.279296875" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="525.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.RemoveController">
+   <children>
+      <Label graphicTextGap="6.0" layoutX="81.0" layoutY="100.0" prefHeight="20.0" styleClass="labelFont" stylesheets="@styleSheet.css" text="Choose a mammal to remove:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="saveButton" layoutX="371.0" layoutY="453.0" mnemonicParsing="false" onAction="#save" stylesheets="@styleSheet.css" text="REMOVE" textFill="#333030">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+         <styleClass>
+            <String fx:value="removeHover" />
+            <String fx:value="saveButton" />
+         </styleClass></Button>
+      <ChoiceBox fx:id="mammals" layoutX="187.0" layoutY="161.0" prefHeight="30.0" prefWidth="182.0" styleClass="Removechocie-box" stylesheets="@styleSheet.css" />
+      <Label layoutX="35.0" layoutY="14.0" prefHeight="26.0" prefWidth="150.0" style="-fx-text-fill: #990000;" styleClass="title" stylesheets="@styleSheet.css" text="Remove Mammal" textFill="#191818">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
